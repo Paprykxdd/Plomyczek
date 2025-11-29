@@ -1,0 +1,167 @@
+.about-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem 2rem;
+}
+
+/* Nagłówek */
+.about-header {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.about-header h1 {
+  /* Płynne skalowanie czcionki w zależności od szerokości ekranu */
+  font-size: clamp(2.5rem, 8vw, 3rem);
+  color: var(--kolor-trawy-ciemny);
+  margin-bottom: 1rem;
+}
+
+.about-subtitle {
+  font-size: 1.3rem;
+  color: var(--kolor-tekstu-ciemny);
+  opacity: 0.8;
+}
+
+/* Sekcja Misja */
+.mission-section {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 5rem;
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.mission-content {
+  flex: 1;
+}
+
+.mission-content h2 {
+  color: var(--kolor-smoka-zielony);
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.mission-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+.mission-image {
+  flex: 1;
+}
+
+.mission-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Sekcja Wartości */
+.values-section {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.values-section h2 {
+  font-size: 2.5rem;
+  color: var(--kolor-trawy-ciemny);
+  margin-bottom: 3rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.value-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: left;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  background-color: #e6f4ea;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  color: var(--kolor-smoka-zielony);
+  font-size: 2rem;
+}
+
+.value-card h3 {
+  color: var(--kolor-tekstu-ciemny);
+  margin-bottom: 1rem;
+}
+
+.value-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Sekcja Kontakt */
+.contact-section {
+  text-align: center;
+  background-color: var(--kolor-trawy-ciemny);
+  color: #fff;
+  padding: 4rem 2rem;
+  border-radius: 20px;
+}
+
+.contact-section h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.contact-section p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: var(--kolor-smoka-zielony);
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .mission-section {
+    flex-direction: column;
+  }
+  .contact-details {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

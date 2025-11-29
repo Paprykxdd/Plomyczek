@@ -1,0 +1,32 @@
+/* --- Global Reset & Body Styles --- */
+/* Usuwamy domyślne marginesy i ustawiamy lepsze renderowanie czcionek */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9f9f9; /* Delikatne tło dla całej strony */
+  color: #333;
+  width: 100%;
+}
+
+/* --- App Layout Container --- */
+/* Ten kontener zapewnia, że stopka jest zawsze na dole strony */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- Main Content Area --- */
+/* To jest kluczowa zmiana! */
+.main-content {
+  flex-grow: 1; /* Pozwala tej sekcji rosnąć i wypychać stopkę */
+  width: 100%; /* Treść zajmuje całą dostępną szerokość... */
+  max-width: 1280px; /* ...ale jest ograniczona na dużych ekranach do czytelnej szerokości */
+  margin: 0 auto; /* Centruje kontener z treścią w poziomie */
+  padding: 2rem 1.5rem; /* Dajemy trochę oddechu (góra/dół i boki) */
+  box-sizing: border-box; /* Zapobiega problemom z paddingiem */
+}

@@ -1,0 +1,144 @@
+.news-section {
+  position: relative;
+  padding: 4rem 2rem;
+  margin-bottom: 3rem;
+  overflow: hidden; /* Ukrywamy elementy wychodzące poza krawędź */
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff); /* Błękitne niebo przechodzące w biel */
+  border-radius: 20px;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.02);
+}
+
+.news-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--kolor-trawy-ciemny);
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2; /* Tekst musi być nad chmurami */
+}
+
+.news-content-wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Grid z kartami --- */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.news-card {
+  background: rgba(255, 255, 255, 0.9); /* Lekko przezroczyste tło */
+  backdrop-filter: blur(5px); /* Efekt rozmycia tła pod kartą */
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+.news-card:hover {
+  transform: translateY(-10px); /* Karta unosi się do góry */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.news-date {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.news-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.tag-wydarzenie { background-color: #ffeaa7; color: #d35400; }
+.tag-warsztaty { background-color: #81ecec; color: #00b894; }
+.tag-nowość { background-color: #ff7675; color: white; }
+
+.news-card h3 {
+  font-size: 1.4rem;
+  color: var(--kolor-tekstu-ciemny);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.news-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.news-link {
+  text-decoration: none;
+  color: var(--kolor-smoka-zielony);
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.news-link:hover {
+  color: var(--kolor-trawy-ciemny);
+}
+
+/* --- ANIMACJA TŁA (CHMURY) --- */
+.news-bg-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none; /* Żeby nie blokowały klikania */
+}
+
+.cloud {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.6;
+  filter: blur(20px); /* Miękkie krawędzie chmur */
+}
+
+.cloud-1 {
+  width: 300px;
+  height: 100px;
+  top: 20%;
+  left: -300px; /* Start poza ekranem */
+  animation: floatCloud 25s linear infinite;
+}
+
+.cloud-2 {
+  width: 400px;
+  height: 150px;
+  top: 60%;
+  left: -400px;
+  animation: floatCloud 35s linear infinite;
+  animation-delay: 5s; /* Druga chmura startuje później */
+}
+
+@keyframes floatCloud {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(120vw); /* Przesuwa się przez cały ekran */
+  }
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .news-title {
+    font-size: 2rem;
+  }
+}

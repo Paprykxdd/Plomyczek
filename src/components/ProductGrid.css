@@ -1,0 +1,19 @@
+    .product-grid-section {
+      width: 100%;
+    }
+
+    .grid-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2.5rem;
+      color: #2c3e50;
+    }
+
+    /* Używamy Grida do stworzenia responsywnej siatki */
+    .product-grid {
+      display: grid;
+      /* Automatycznie dopasowuje liczbę kolumn do szerokości ekranu */
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    

@@ -1,0 +1,138 @@
+.reading-page-container {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reading-header {
+  text-align: center;
+  margin-bottom: 3rem; /* Zmniejszony margines, bo doszedł tekst */
+}
+
+.hashtag-title {
+  font-size: 3.5rem;
+  color: var(--kolor-trawy-ciemny);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.hashtag-description {
+  font-size: 1.2rem;
+  color: var(--kolor-tekstu-ciemny);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* --- STYLE DLA NOWEGO TEKSTU --- */
+.reading-story {
+  max-width: 800px;
+  margin: 0 auto 4rem auto; /* Centrujemy i dodajemy odstęp od galerii */
+  text-align: left; /* Lub 'left' lub 'justify', zależnie od preferencji */
+  padding: 2rem;
+  background-color: #fff; /* Delikatne wyróżnienie tłem */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.reading-story h2 {
+  color: var(--kolor-smoka-zielony);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.reading-story p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+.reading-story p:last-child {
+  margin-bottom: 0;
+}
+/* -------------------------------- */
+
+/* Galeria */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.gallery-item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+  aspect-ratio: 1 / 1;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px) rotate(1deg);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(58, 90, 64, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 3rem;
+  color: white;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* Sekcja dolna */
+.join-action {
+  text-align: center;
+  background-color: var(--kolor-bialy-neutralny);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.join-action h3 {
+  color: var(--kolor-tekstu-ciemny);
+  margin-bottom: 1.5rem;
+}
+
+.instagram-button {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.instagram-button:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .hashtag-title {
+    font-size: 2.5rem;
+  }
+}

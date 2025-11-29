@@ -1,0 +1,36 @@
+/* Plik: src/index.css */
+:root {
+  --kolor-smoka-zielony: #76c893;      /* Główny, jasny zielony */
+  --kolor-trawy-ciemny: #3a5a40;      /* Ciemniejszy zielony do akcentów */
+  --kolor-nieba-blekitny: #cae9ff;     /* Jasne tło strony */
+  --kolor-tekstu-ciemny: #2c3e50;      /* Główny kolor tekstu */
+  --kolor-bialy-neutralny: #ffffff;
+  --kolor-szary-tlo: #f8f9fa;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Używamy naszych nowych zmiennych */
+  background-color: var(--kolor-nieba-blekitny);
+  color: var(--kolor-tekstu-ciemny);
+}
+
+/* Globalny reset dla box-sizing - bardzo dobra praktyka! */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* --- KLUCZOWA ZMIANA --- */
+/* Usuwamy ograniczenia z głównego kontenera aplikacji */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}

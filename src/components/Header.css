@@ -1,0 +1,111 @@
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--kolor-bialy-neutralny);
+  border-bottom: 1px solid #eaeaea;
+  position: relative; /* Ważne dla pozycjonowania menu mobilnego */
+  z-index: 1000; /* Zapewnia, że nagłówek jest zawsze na wierzchu */
+}
+
+.logo a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.logo-img {
+  max-height: 70px;
+  width: auto;
+  display: block;
+}
+
+/* Domyślne style dla Desktopu */
+.main-nav {
+  flex-grow: 1;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--kolor-tekstu-ciemny);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap; /* Zapobiega łamaniu tekstu w przyciskach */
+}
+
+.main-nav a.active {
+  background-color: var(--kolor-smoka-zielony);
+  color: var(--kolor-bialy-neutralny);
+}
+
+.main-nav a:hover:not(.active) {
+  background-color: #f0f0f0;
+}
+
+/* Przycisk Hamburgera (Domyślnie ukryty na dużych ekranach) */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: var(--kolor-tekstu-ciemny);
+  cursor: pointer;
+}
+
+/* --- STYLE MOBILNE (Hamburger Menu) --- */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 1rem; /* Mniejszy padding na telefonach */
+  }
+
+  /* Pokaż przycisk hamburgera */
+  .menu-toggle {
+    display: block; 
+  }
+
+  /* Ukryj/Przekształć nawigację */
+  .main-nav {
+    position: absolute;
+    top: 100%; /* Zaraz pod nagłówkiem */
+    left: 0;
+    width: 100%;
+    background-color: var(--kolor-bialy-neutralny);
+    border-bottom: 1px solid #eaeaea;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    
+    /* Animacja otwierania */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  /* Klasa dodawana przez React gdy menu jest otwarte */
+  .main-nav.active {
+    max-height: 500px; /* Wystarczająco dużo, by pokazać linki */
+  }
+
+  .main-nav ul {
+    flex-direction: column; /* Linki pionowo */
+    align-items: center;
+    padding: 2rem 0;
+    gap: 1.5rem;
+  }
+
+  .main-nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem 2rem;
+  }
+}

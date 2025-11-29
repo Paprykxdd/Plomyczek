@@ -1,0 +1,79 @@
+.site-footer {
+  text-align: center;
+  padding: 3rem 2rem 1.5rem 2rem;
+  margin-top: auto;
+  background-color: var(--kolor-trawy-ciemny);
+  color: var(--kolor-szary-tlo);
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* --- Social Media --- */
+.socials-title {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Wrapper ikony */
+.social-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styl dla linku wewnątrz wrappera */
+.social-icon-wrapper a {
+  color: #fff; /* Białe ikony na start */
+  font-size: 1.8rem;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+/* Ogólna animacja uniesienia dla wszystkich */
+.social-icon-wrapper a:hover {
+  transform: translateY(-3px);
+}
+
+/* --- KONKRETNE KOLORY PO NAJECHANIU --- */
+
+/* Instagram - Fioletowy/Różowy */
+.social-icon-wrapper.instagram a:hover {
+  color: #d62976; /* Kolor marki Instagram */
+}
+
+/* Facebook - Niebieski */
+.social-icon-wrapper.facebook a:hover {
+  color: #1877F2; /* Kolor marki Facebook */
+}
+
+/* Linia oddzielająca */
+.footer-divider {
+  width: 100%;
+  max-width: 300px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0.5rem 0;
+}
+
+.copyright {
+  opacity: 0.6;
+  font-size: 0.85rem;
+}
