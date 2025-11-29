@@ -41,7 +41,7 @@ function Header() {
           <li><NavLink to="/o-nas" onClick={closeMenu}>O Nas</NavLink></li>
           <li><NavLink to="/sklep" onClick={closeMenu}>Sklep</NavLink></li>
           <li><NavLink to="/czytamy-plomyczek" onClick={closeMenu}>#CzytamyPłomyczka</NavLink></li>
-          <li><NavLink to="/pobieralnia" onClick={closeMenu}>Pomoce</NavLink></li>
+          <li><NavLink to="/pobieralnia" onClick={closeMenu}>Dla rodziców/ nauczycieli</NavLink></li>
         </ul>
       </nav>
     </header>
