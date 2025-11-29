@@ -80,8 +80,12 @@ function ReadingPlomyczekPage() {
         <h2><i class="fa-solid fa-gift"></i> Materiały do pobrania</h2>
         <p>Dla uczestników przygotowaliśmy darmowe materiały, które pomogą w organizacji
            wydarzenia:</p>
-           <p><i class="fa-solid fa-thumbtack"></i><strong> Plakat akcji #czytamypłomyczka</strong></p>
-           <p><i class="fa-solid fa-thumbtack"></i><strong> Zakładki do książek z Płomyczkiem</strong></p>
+           <div className="download-links">
+           <a href="/img/lakat.jpg" download><i class="fa-solid fa-thumbtack"></i><strong> Plakat akcji #czytamypłomyczka</strong></a>
+           </div>
+           <div className="download-links">
+           <a href="/img/zakladka_plomyczek_2_final.pdf" download><i class="fa-solid fa-thumbtack"></i><strong> Zakładki do książek z Płomyczkiem</strong></a>
+           </div>
            <p>Materiały możesz wydrukować i wykorzystać w szkole, przedszkolu, bibliotece lub w domu.</p>
 
         <h2><i class="fa-solid fa-rainbow"></i> Podziel się udziałem w akcji</h2>
